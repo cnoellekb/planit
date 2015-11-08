@@ -1,0 +1,35 @@
+#googlemaps { 
+  height: 100%; 
+  width: 100%; 
+  position:absolute; 
+  top: 0; 
+  left: 0; 
+  z-index: 0; /* 0 since will be below form */
+}
+ 
+#geoform { 
+  position: relative; 
+  z-index: 1; /* should be higher than Google Maps */
+  width: 400px;
+  margin: 105px auto 0;
+  padding: 10px;
+  background: white;
+  text-align: center;
+  height: auto;
+  opacity: .80; /* Set the opacity for a slightly transparent Google Form */ 
+  color: black;
+  font-family: Helvetica;
+  font-size: 25px;
+  padding: 20px;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+#head {
+  font-family: Helvetica;
+  text-align: center;
+  position: relative; 
+  font-size: 48px;
+  z-index: 2; /* should be higher than Google Maps */
+  color: #68838B;
+}
