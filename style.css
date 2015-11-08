@@ -10,14 +10,16 @@
 #geoform { 
   position: relative; 
   z-index: 1; /* The z-index should be higher than Google Maps */
-  width: 300px;
-  margin: 60px auto 0;
+  width: 400px;
+  margin: 105px auto 0;
   padding: 10px;
   background: black;
+  text-align: center;
   height: auto;
-  opacity: .45; /* Set the opacity for a slightly transparent Google Form */ 
+  opacity: .75; /* Set the opacity for a slightly transparent Google Form */ 
   color: white;
   font-family: Helvetica;
   font-size: 25px;
   padding: 20px;
+  border-radius: 15px;
 }
