@@ -4,22 +4,32 @@
   position:absolute; 
   top: 0; 
   left: 0; 
-  z-index: 0; /* Set z-index to 0 as it will be on a layer below the contact form */
+  z-index: 0; /* 0 since will be below form */
 }
  
 #geoform { 
   position: relative; 
-  z-index: 1; /* The z-index should be higher than Google Maps */
+  z-index: 1; /* should be higher than Google Maps */
   width: 400px;
   margin: 105px auto 0;
   padding: 10px;
-  background: black;
+  background: white;
   text-align: center;
   height: auto;
-  opacity: .75; /* Set the opacity for a slightly transparent Google Form */ 
-  color: white;
+  opacity: .80; /* Set the opacity for a slightly transparent Google Form */ 
+  color: black;
   font-family: Helvetica;
   font-size: 25px;
   padding: 20px;
   border-radius: 15px;
+  font-weight: bold;
+}
+
+#head {
+  font-family: Helvetica;
+  text-align: center;
+  position: relative; 
+  font-size: 48px;
+  z-index: 2; /* should be higher than Google Maps */
+  color: #68838B;
 }
