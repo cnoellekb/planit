@@ -9,6 +9,22 @@ var yelp = require("yelp").createClient({
 yelp.search({term: "food", location: "Montreal"}, function(error, data) {
   console.log(error);
   console.log(data);
+
+  var http = require("http");
+
+  http.createServer(function (request, response) {
+
+     // Send the HTTP header
+     // HTTP Status: 200 : OK
+     // Content Type: text/plain
+     response.writeHead(200, {'Content-Type': 'text/plain'});
+
+     // Send the response body as "Hello World"
+     response.end(JSON.stringify(data));
+  }).listen(8081);
+
+  // Console will print the message
+  console.log('Server running at http://127.0.0.1:8081/');
 });
 
 // See http://www.yelp.com/developers/documentation/v2/business
@@ -16,19 +32,3 @@ yelp.business("yelp-san-francisco", function(error, data) {
   console.log(error);
   console.log(data);
 });
-
-var http = require("http");
-
-http.createServer(function (request, response) {
-
-   // Send the HTTP header
-   // HTTP Status: 200 : OK
-   // Content Type: text/plain
-   response.writeHead(200, {'Content-Type': 'text/plain'});
-
-   // Send the response body as "Hello World"
-   response.end('Hello World\n');
-}).listen(8081);
-
-// Console will print the message
-console.log('Server running at http://127.0.0.1:8081/');
